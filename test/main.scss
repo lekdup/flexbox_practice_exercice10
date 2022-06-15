@@ -1,0 +1,76 @@
+$color-grisclair: #EEEEEE;
+$color-grisfonce: #757575;
+$color-bleu: #263238;
+$color-rouge: #E53935;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: $color-bleu;
+}
+.bloc-note {
+    display: flex;
+    @media all and (max-width:1000px)
+    {
+        flex-direction: column;
+    }
+}
+.byline {
+    background-color: $color-grisclair;
+    flex-shrink: 0;
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media all and (max-width:1000px)
+    {
+        padding: 50px 30px;
+    }
+    & h1 {
+        text-transform: uppercase;
+        font-size: 40px;
+    }
+    & h1, p{
+        padding: 10px 30px;
+    }
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media all and (max-width:600px)
+    {
+        flex-direction: column;
+    }
+}
+.proj-prev {
+    flex-basis: 33.33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    &__logo {
+        width: 40px;
+        margin: auto;
+        & img {
+            width: 100%;
+        }
+    }
+    & h2{
+        text-transform: uppercase;
+        font-size: 14px;
+        margin: 25px 0;
+    }
+    &--different{
+        background-color: $color-bleu;
+        color: $color-grisclair;
+        & h2{
+            color: $color-rouge;
+        }
+    }
+}
